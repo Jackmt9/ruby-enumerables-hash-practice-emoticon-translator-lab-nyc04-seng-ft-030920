@@ -5,9 +5,10 @@ require 'pry'
 def load_library(file_path)
   # code goes here
   library = YAML.load_file(file_path)
-  new = {"get_meaning" => {}, "get_emoticon" => {} }
-  library.each do |meaning, emoticon|
-    library[]
+  result = {"get_meaning" => {}, "get_emoticon" => {} }
+  library.each do |meaning, emoticons|
+    result["get_meaning"][emoticons[1]] = meaning
+    result["get_emoticon"][]
   binding.pry
 end
 
