@@ -4,7 +4,9 @@ require 'pry'
 
 def load_library(file_path)
   # code goes here
-  YAML.load_file(file_path)
+  library = YAML.load_file(file_path)
+  new = {:get_meaning => {}, :get_emoticon => {} }
+  library.each do |name, emoticon|
   binding.pry
 end
 
