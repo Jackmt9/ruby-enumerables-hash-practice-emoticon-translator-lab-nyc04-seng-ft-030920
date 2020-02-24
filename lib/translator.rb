@@ -18,5 +18,5 @@ end
 
 def get_english_meaning(file_path, emoticon)
   find = load_library(file_path)["get_meaning"][emoticon]
-  
+  find ? find : "Sorry, that emoticon was not found"
 end
